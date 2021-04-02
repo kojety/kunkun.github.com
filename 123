@@ -1,5 +1,5 @@
 proxies:
-- {"name":"Relay_🇦🇺AU-🇺🇸US_306 |34.60Mb","server":"1.0.0.140","type":"vmess","country":"🇦🇺AU","port":80,"uuid":"57e0cb4d-eae5-48ec-8091-149dc2b309e0","alterId":0,"cipher":"auto","network":"ws","ws-path":"/s/ff5c0fb.fm.apple.com:30513","servername":"sg.moss.network","ws-headers":{"HOST":"sg.moss.network"},"http-opts":{},"h2-opts":{},"skip-cert-verify":true}
+
 - {"name":"Relay_🇦🇺AU-🇺🇸US_307 |47.77Mb","server":"1.0.0.0","type":"vmess","country":"🇦🇺AU","port":443,"uuid":"65f11be5-ac71-4f0c-874b-d93c610c66ef","alterId":64,"cipher":"auto","network":"ws","ws-path":"/","servername":"us-a.freeproxy1.workers.dev","ws-headers":{"HOST":"us-a.freeproxy1.workers.dev"},"http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true}
 - {"name":"Relay_🇦🇺AU-🇺🇸US_308 |37.27Mb","server":"1.0.0.120","type":"vmess","country":"🇦🇺AU","port":80,"uuid":"57e0cb4d-eae5-48ec-8091-149dc2b309e0","alterId":0,"cipher":"auto","network":"ws","ws-path":"/s/ff5c0fb.fm.apple.com:30513","servername":"sg.moss.network","ws-headers":{"HOST":"sg.moss.network"},"http-opts":{},"h2-opts":{},"skip-cert-verify":true}
 - {"name":"Relay_🇦🇺AU-🇺🇸US_309 |40.61Mb","server":"1.0.0.123","type":"vmess","country":"🇦🇺AU","port":80,"uuid":"57e0cb4d-eae5-48ec-8091-149dc2b309e0","alterId":0,"cipher":"auto","network":"ws","ws-path":"/s/ff5c0fb.fm.apple.com:30513","servername":"trump.moss.network","ws-headers":{"HOST":"trump.moss.network"},"http-opts":{},"h2-opts":{},"skip-cert-verify":true}
@@ -9,7 +9,7 @@ proxies:
 - {"name":"Relay_ |64.14Mb","server":"ss-02.ssrsub.one","type":"ss","country":"🇨🇦CA","port":1153,"password":"t.me/SSRSUB","cipher":"aes-128-gcm"}
 - {"name":"Relay_ |71.77Mb","server":"ss-01.ssrsub.one","type":"ss","country":"🇨🇦CA","port":152,"password":"dlj.tf/ssrsub","cipher":"aes-128-gcm"}
 - {"name":"Relay_ | 2.99Mb","server":"ss-06.ssrsub.one","type":"ss","country":"🇨🇦CA","port":1153,"password":"t.me/SSRSUB","cipher":"aes-128-gcm"}
-- {"name":"Relay_ | 2.26Mb","server":"ss-09.ssrsub.one","type":"ss","country":"🇨🇦CA","port":152,"password":"dlj.tf/ssrsub","cipher":"aes-128-gcm"}
+
 - {"name":"Relay_ |56.24Mb","server":"ss-03.ssrsub.one","type":"ss","country":"🇨🇦CA","port":152,"password":"dlj.tf/ssrsub","cipher":"aes-128-gcm"}
 - {"name":"Relay_ |70.00Mb","server":"ss-04.ssrsub.one","type":"ss","country":"🇨🇦CA","port":1153,"password":"t.me/SSRSUB","cipher":"aes-128-gcm"}
 - {"name":"Relay_ | 6.76Mb","server":"ss-08.ssrsub.one","type":"ss","country":"🇨🇦CA","port":1153,"password":"t.me/SSRSUB","cipher":"aes-128-gcm"}
