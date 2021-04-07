@@ -1,0 +1,99 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies: null
+proxy-groups:
+  - name: 全局选择
+    type: select
+    proxies:
+      - 选择国家
+  - name: 选择国家
+    type: select
+    proxies:
+      - 🇯🇵 日本
+  - name: 🇯🇵 日本
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - jp
+  - name: 🇺🇸 美国
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - us
+proxy-providers:
+ 
+ 
+  us:
+    type: http
+    url: https://proxypoolss.tk/clash/proxies?c=US
+    path: proxypoolss.tk/provider-us.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  
+  jp:
+    type: http
+    url: https://proxypoolss.tk/clash/proxies?c=JP
+    path: proxypoolss.tk/provider-jp.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  
+  others:
+    type: http
+    url: https://proxypoolss.tk/clash/proxies?nc=CN,HK,TW,US,CA,JP,SG,AU,CH,DE,GB,NL,FR,RU
+    path: proxypoolss.tk/provider-others.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  all:
+    type: http
+    url: https://proxypoolss.tk/clash/proxies
+    path: proxypoolss.tk/provider.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+rules:
+  - DOMAIN-SUFFIX,smtp,DIRECT
+  - DOMAIN-KEYWORD,aria2,DIRECT
+  - DOMAIN-SUFFIX,ampproject.org,全局选择
+  - DOMAIN-SUFFIX,appspot.com,全局选择
+  - DOMAIN-SUFFIX,blogger.com,全局选择
+  - DOMAIN-SUFFIX,getoutline.org,全局选择
+  - DOMAIN-SUFFIX,gvt0.com,全局选择
+  - DOMAIN-SUFFIX,gvt1.com,全局选择
+  - DOMAIN-SUFFIX,gvt3.com,全局选择
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,全局选择
+  - DOMAIN-KEYWORD,google,全局选择
+  - DOMAIN-KEYWORD,blogspot,全局选择
+  - DOMAIN-SUFFIX,onedrive.live.com,全局选择
+  - DOMAIN-SUFFIX,xboxlive.com,全局选择
+  - DOMAIN-SUFFIX,cdninstagram.com,全局选择
+  - DOMAIN-SUFFIX,fb.com,全局选择
+  - DOMAIN-SUFFIX,fb.me,全局选择
+  - DOMAIN-SUFFIX,fbaddins.com,全局选择
+  - DOMAIN-SUFFIX,fbcdn.net,全局选择
+  - DOMAIN-SUFFIX,fbsbx.com,全局选择
+  - DOMAIN-SUFFIX,fbworkmail.com,全局选择
+  - DOMAIN-SUFFIX,instagram.com,全局选择
+  - DOMAIN-SUFFIX,m.me,全局选择
+  - DOMAIN-SUFFIX,messenger.com,全局选择
+  - DOMAIN-SUFFIX,oculus.com,全局选择
+  - DOMAIN-SUFFIX,oculuscdn.com,全局选择
+  - DOMAIN-SUFFIX,rocksdb.org,全局选择
+  - DOMAIN-SUFFIX,whatsapp.com,全局选择
+  - DOMAIN-SUFFIX,whatsapp.net,全局选择
+  - DOMAIN-KEYWORD,facebook,全局选择
+  - IP-CIDR,119.28.28.28/32,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT
+  - MATCH,全局选择
